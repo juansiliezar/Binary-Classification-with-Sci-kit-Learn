@@ -1,18 +1,24 @@
-# Binary Classification with Sci-kit Learn
+# Binary Classification with Sci-kit Learn: Megaline Plan Recommendation
 
-### **Problem Statement**
-Mobile carrier Megaline has discovered that many of its subscribers use legacy plans. They want a model that will analyze subscribers' behavior and recommend one of Megaline's newer plans, Smart or Ultra, with a minimum accuracy score of 75%. For this binary classification task I aim to develop a model with the highest possible accuracy. I will employ three classification algorithms to train the model. The trained model with the highest accuracy score will be delivered to Megaline. The three learning algorithms I will employ are:
+## Problem Statement
+Mobile carrier Megaline has identified a challenge with a substantial number of their subscribers sticking to outdated service plans. The objective is to develop a predictive model that analyses subscriber behavior and accurately recommends one of the newer, more advantageous plans—either Smart or Ultra. The target is to achieve a minimum accuracy of 75%, aiming for the highest possible accuracy to ensure effective plan recommendations.
 
-1. Decision Tree Classifier
-2. Random Forest Classifier
-3. Logistic Regression Classifier
+## Solution Approach
+This project utilizes three different machine learning algorithms for the binary classification task:
+- **Decision Tree Classifier**: A model that uses a tree-like graph of decisions and their possible consequences.
+- **Random Forest Classifier**: An ensemble learning method for classification that constructs a multitude of decision trees at training time.
+- **Logistic Regression Classifier**: A statistical model that in its basic form uses a logistic function to model a binary dependent variable.
 
-The data Megaline has provided represents the behavior of users who have already switch to one of the new plans from the legacy plans. The data was pre-processed in a previous analysis I did for Megaline. Every observation in the dataset contains monthly behavior information about one user. The information given is as follows: 
+## Data Description
+The dataset provided by Megaline includes behavior metrics of users who have already transitioned from legacy to newer plans. Each record in the dataset represents monthly behavior data of a single user with the following attributes:
+- `calls`: Number of calls made by the user.
+- `minutes`: Total duration of calls in minutes.
+- `messages`: Number of text messages sent.
+- `mb_used`: Data usage in megabytes.
+- `is_ultra`: Current plan of the user (1 for Ultra, 0 for Smart).
 
-- сalls — number of calls
-- minutes — total call duration in minutes
-- messages — number of text messages
-- mb_used — Internet traffic used in MB
-- is_ultra — plan for the current month (Ultra - 1, Smart - 0)
+## Model Evaluation
+Models will be evaluated based on their accuracy using the `accuracy_score` function from the `sklearn.metrics` library. The model with the highest accuracy will be recommended for implementation to assist Megaline in promoting their newer plans effectively.
 
-I will use the accuracy score function provided by the sklearn metrics library to evaluate the trained models
+## Conclusion
+The final deliverable will be the model that best categorizes subscribers into the most suitable plan, fostering better customer satisfaction and enhanced service usage.
